@@ -57,18 +57,20 @@ jobs:
         run: npx vercel --prod
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-Vercel
+```
+##Vercel
 Configure o Vercel para realizar o deploy automático a partir do repositório GitHub.
 Certifique-se de que as variáveis de ambiente necessárias estejam configuradas no Vercel.
-Contribuindo
-Para contribuir com o projeto, siga estas etapas:
 
+##Contribuindo
+Para contribuir com o projeto, siga estas etapas:
 Faça um fork do repositório.
 Crie uma nova branch para suas alterações.
 Realize as alterações e teste-as localmente.
 Faça um commit e envie suas alterações para o repositório remoto.
 Crie um pull request com uma descrição clara das alterações.
-Requisitos
+
+##Requisitos
 Node.js
 GitHub Actions
 Vercel

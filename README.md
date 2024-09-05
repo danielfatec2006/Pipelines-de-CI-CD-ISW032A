@@ -27,36 +27,28 @@ O pipeline é configurado usando GitHub Actions e Vercel. Abaixo está uma visã
 Exemplo de configuração:
 
 ```yaml
-name: CI/CD Pipeline
+
+name: Deploy to Vercel
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+    - uses: actions/checkout@v2
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '14'
+    - name: Install Vercel CLI
+      run: npm i -g vercel
 
-      - name: Install dependencies
-        run: npm install
-
-      - name: Run tests
-        run: npm test
-
-      - name: Deploy to Vercel
-        run: npx vercel --prod
-        env:
-          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+    - name: Deploy to Vercel
+      run: vercel --token ${{ secrets.VERCEL_TOKEN }} --prod
+      env:
+        VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+        VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
 ```
 ## Vercel
 

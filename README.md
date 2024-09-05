@@ -1,6 +1,3 @@
-# Pipelines-de-CI-CD-ISW032A
-Exercício Prático: Estruturação de Pipelines de CI/CD com GitHub Actions
-
 # Pipeline de CI/CD para o Projeto ISW032A
 
 ## Visão Geral
@@ -60,19 +57,18 @@ jobs:
         run: npx vercel --prod
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-##Vercel
+Vercel
 Configure o Vercel para realizar o deploy automático a partir do repositório GitHub.
 Certifique-se de que as variáveis de ambiente necessárias estejam configuradas no Vercel.
-
-##Contribuindo
+Contribuindo
 Para contribuir com o projeto, siga estas etapas:
+
 Faça um fork do repositório.
 Crie uma nova branch para suas alterações.
 Realize as alterações e teste-as localmente.
 Faça um commit e envie suas alterações para o repositório remoto.
 Crie um pull request com uma descrição clara das alterações.
-
-##Requisitos
+Requisitos
 Node.js
 GitHub Actions
 Vercel
